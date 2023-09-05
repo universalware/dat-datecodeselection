@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.dat</groupId>
 	<artifactId>dat-datecodeselection</artifactId>
-	<version>080.2023.06</version>
+	<version>081.2023.08</version>
 
 	<name>DAT Soap Services</name>
 	<description>Build on WSDL, not authorized by DAT</description>

@@ -29,6 +29,66 @@ public interface ConversionFunctionsService {
      * 
      * @param request
      * @return
+     *     returns de.dat.datecodeselection.services.conversionfunctionsservice.VXS
+     */
+    @WebMethod(action = "getEquipmentFromManufacturerCodeN")
+    @WebResult(name = "VXS", targetNamespace = "http://www.dat.de/vxs")
+    @RequestWrapper(localName = "getEquipmentFromManufacturerCodeN", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentFromManufacturerCodeN")
+    @ResponseWrapper(localName = "getEquipmentFromManufacturerCodeNResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentFromManufacturerCodeNResponse")
+    @Action(input = "getEquipmentFromManufacturerCodeN", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/getEquipmentFromManufacturerCodeNResponse")
+    public VXS getEquipmentFromManufacturerCodeN(
+        @WebParam(name = "request", targetNamespace = "")
+        EquipmentFromManufacturerCodeSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.lang.Object
+     */
+    @WebMethod(action = "constructionTime2Date")
+    @WebResult(name = "Date", targetNamespace = "")
+    @RequestWrapper(localName = "constructionTime2Date", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.ConstructionTime2Date")
+    @ResponseWrapper(localName = "constructionTime2DateResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.ConstructionTime2DateResponse")
+    @Action(input = "constructionTime2Date", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/constructionTime2DateResponse")
+    public Object constructionTime2Date(
+        @WebParam(name = "request", targetNamespace = "")
+        ConstructionTime2DateSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns de.dat.datecodeselection.services.conversionfunctionsservice.VXS
+     */
+    @WebMethod(action = "getPossibleEquipmentN")
+    @WebResult(name = "VXS", targetNamespace = "http://www.dat.de/vxs")
+    @RequestWrapper(localName = "getPossibleEquipmentN", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetPossibleEquipmentN")
+    @ResponseWrapper(localName = "getPossibleEquipmentNResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetPossibleEquipmentNResponse")
+    @Action(input = "getPossibleEquipmentN", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/getPossibleEquipmentNResponse")
+    public VXS getPossibleEquipmentN(
+        @WebParam(name = "request", targetNamespace = "")
+        VehicleSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.conversionfunctionsservice.StringStringPair>
+     */
+    @WebMethod(action = "getEquipmentGroups")
+    @WebResult(name = "equipmentGroup", targetNamespace = "")
+    @RequestWrapper(localName = "getEquipmentGroups", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentGroups")
+    @ResponseWrapper(localName = "getEquipmentGroupsResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentGroupsResponse")
+    @Action(input = "getEquipmentGroups", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/getEquipmentGroupsResponse")
+    public List<StringStringPair> getEquipmentGroups(
+        @WebParam(name = "request", targetNamespace = "")
+        AbstractSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
      *     returns int
      */
     @WebMethod(action = "date2ConstructionTime")
@@ -61,21 +121,6 @@ public interface ConversionFunctionsService {
      * @return
      *     returns de.dat.datecodeselection.services.conversionfunctionsservice.VXS
      */
-    @WebMethod(action = "getPossibleEquipmentN")
-    @WebResult(name = "VXS", targetNamespace = "http://www.dat.de/vxs")
-    @RequestWrapper(localName = "getPossibleEquipmentN", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetPossibleEquipmentN")
-    @ResponseWrapper(localName = "getPossibleEquipmentNResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetPossibleEquipmentNResponse")
-    @Action(input = "getPossibleEquipmentN", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/getPossibleEquipmentNResponse")
-    public VXS getPossibleEquipmentN(
-        @WebParam(name = "request", targetNamespace = "")
-        VehicleSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns de.dat.datecodeselection.services.conversionfunctionsservice.VXS
-     */
     @WebMethod(action = "getExistingEquipmentN")
     @WebResult(name = "VXS", targetNamespace = "http://www.dat.de/vxs")
     @RequestWrapper(localName = "getExistingEquipmentN", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetExistingEquipmentN")
@@ -84,50 +129,5 @@ public interface ConversionFunctionsService {
     public VXS getExistingEquipmentN(
         @WebParam(name = "request", targetNamespace = "")
         VehicleSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.lang.Object
-     */
-    @WebMethod(action = "constructionTime2Date")
-    @WebResult(name = "Date", targetNamespace = "")
-    @RequestWrapper(localName = "constructionTime2Date", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.ConstructionTime2Date")
-    @ResponseWrapper(localName = "constructionTime2DateResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.ConstructionTime2DateResponse")
-    @Action(input = "constructionTime2Date", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/constructionTime2DateResponse")
-    public Object constructionTime2Date(
-        @WebParam(name = "request", targetNamespace = "")
-        ConstructionTime2DateSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.conversionfunctionsservice.StringStringPair>
-     */
-    @WebMethod(action = "getEquipmentGroups")
-    @WebResult(name = "equipmentGroup", targetNamespace = "")
-    @RequestWrapper(localName = "getEquipmentGroups", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentGroups")
-    @ResponseWrapper(localName = "getEquipmentGroupsResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentGroupsResponse")
-    @Action(input = "getEquipmentGroups", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/getEquipmentGroupsResponse")
-    public List<StringStringPair> getEquipmentGroups(
-        @WebParam(name = "request", targetNamespace = "")
-        AbstractSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns de.dat.datecodeselection.services.conversionfunctionsservice.VXS
-     */
-    @WebMethod(action = "getEquipmentFromManufacturerCodeN")
-    @WebResult(name = "VXS", targetNamespace = "http://www.dat.de/vxs")
-    @RequestWrapper(localName = "getEquipmentFromManufacturerCodeN", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentFromManufacturerCodeN")
-    @ResponseWrapper(localName = "getEquipmentFromManufacturerCodeNResponse", targetNamespace = "http://sphinx.dat.de/services/ConversionFunctionsService", className = "de.dat.datecodeselection.services.conversionfunctionsservice.GetEquipmentFromManufacturerCodeNResponse")
-    @Action(input = "getEquipmentFromManufacturerCodeN", output = "http://sphinx.dat.de/services/ConversionFunctionsService/ConversionFunctionsService/getEquipmentFromManufacturerCodeNResponse")
-    public VXS getEquipmentFromManufacturerCodeN(
-        @WebParam(name = "request", targetNamespace = "")
-        EquipmentFromManufacturerCodeSelectionRequest request);
 
 }

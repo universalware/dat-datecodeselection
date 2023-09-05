@@ -26,18 +26,18 @@ public interface Authentication {
 
     /**
      * 
-     * @param request
-     * @return
-     *     returns java.lang.String
+     * @param arg1
+     * @param arg0
      */
-    @WebMethod(action = "generateToken")
-    @WebResult(name = "token", targetNamespace = "")
-    @RequestWrapper(localName = "generateToken", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GenerateToken")
-    @ResponseWrapper(localName = "generateTokenResponse", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GenerateTokenResponse")
-    @Action(input = "generateToken", output = "http://sphinx.dat.de/services/Authentication/Authentication/generateTokenResponse")
-    public String generateToken(
-        @WebParam(name = "request", targetNamespace = "")
-        GenerateTokenRequest request);
+    @WebMethod
+    @RequestWrapper(localName = "authenticateInterfacePartner", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.AuthenticateInterfacePartner")
+    @ResponseWrapper(localName = "authenticateInterfacePartnerResponse", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.AuthenticateInterfacePartnerResponse")
+    @Action(input = "http://sphinx.dat.de/services/Authentication/Authentication/authenticateInterfacePartnerRequest", output = "http://sphinx.dat.de/services/Authentication/Authentication/authenticateInterfacePartnerResponse")
+    public void authenticateInterfacePartner(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
     /**
      * 
@@ -66,6 +66,18 @@ public interface Authentication {
     /**
      * 
      * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "getProductVersion")
+    @WebResult(name = "productVersion", targetNamespace = "")
+    @RequestWrapper(localName = "getProductVersion", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GetProductVersion")
+    @ResponseWrapper(localName = "getProductVersionResponse", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GetProductVersionResponse")
+    @Action(input = "getProductVersion", output = "http://sphinx.dat.de/services/Authentication/Authentication/getProductVersionResponse")
+    public String getProductVersion();
+
+    /**
+     * 
+     * @return
      *     returns java.lang.Boolean
      */
     @WebMethod(action = "doLogout")
@@ -81,6 +93,21 @@ public interface Authentication {
      * @return
      *     returns java.lang.String
      */
+    @WebMethod(action = "generateToken")
+    @WebResult(name = "token", targetNamespace = "")
+    @RequestWrapper(localName = "generateToken", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GenerateToken")
+    @ResponseWrapper(localName = "generateTokenResponse", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GenerateTokenResponse")
+    @Action(input = "generateToken", output = "http://sphinx.dat.de/services/Authentication/Authentication/generateTokenResponse")
+    public String generateToken(
+        @WebParam(name = "request", targetNamespace = "")
+        GenerateTokenRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.lang.String
+     */
     @WebMethod(action = "doLogin")
     @WebResult(name = "sessionID", targetNamespace = "")
     @RequestWrapper(localName = "doLogin", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.DoLogin")
@@ -89,32 +116,5 @@ public interface Authentication {
     public String doLogin(
         @WebParam(name = "request", targetNamespace = "")
         DoLoginRequest request);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "authenticateInterfacePartner", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.AuthenticateInterfacePartner")
-    @ResponseWrapper(localName = "authenticateInterfacePartnerResponse", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.AuthenticateInterfacePartnerResponse")
-    @Action(input = "http://sphinx.dat.de/services/Authentication/Authentication/authenticateInterfacePartnerRequest", output = "http://sphinx.dat.de/services/Authentication/Authentication/authenticateInterfacePartnerResponse")
-    public void authenticateInterfacePartner(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
-
-    /**
-     * 
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod(action = "getProductVersion")
-    @WebResult(name = "productVersion", targetNamespace = "")
-    @RequestWrapper(localName = "getProductVersion", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GetProductVersion")
-    @ResponseWrapper(localName = "getProductVersionResponse", targetNamespace = "http://sphinx.dat.de/services/Authentication", className = "de.dat.datecodeselection.services.authentication.GetProductVersionResponse")
-    @Action(input = "getProductVersion", output = "http://sphinx.dat.de/services/Authentication/Authentication/getProductVersionResponse")
-    public String getProductVersion();
 
 }

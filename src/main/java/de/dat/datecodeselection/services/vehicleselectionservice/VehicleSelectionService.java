@@ -46,96 +46,6 @@ public interface VehicleSelectionService {
      * @return
      *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
      */
-    @WebMethod(action = "getHgvPlatformAggregateManufacturers")
-    @WebResult(name = "hgvPlatformAggregateManufacturer", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformAggregateManufacturers", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateManufacturers")
-    @ResponseWrapper(localName = "getHgvPlatformAggregateManufacturersResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateManufacturersResponse")
-    @Action(input = "getHgvPlatformAggregateManufacturers", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformAggregateManufacturersResponse")
-    public List<IntegerStringPair> getHgvPlatformAggregateManufacturers(
-        @WebParam(name = "request", targetNamespace = "")
-        AbstractSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getHgvPlatformBaseModels")
-    @WebResult(name = "hgvPlatformBaseModel", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformBaseModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformBaseModels")
-    @ResponseWrapper(localName = "getHgvPlatformBaseModelsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformBaseModelsResponse")
-    @Action(input = "getHgvPlatformBaseModels", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformBaseModelsResponse")
-    public List<IntegerStringPair> getHgvPlatformBaseModels(
-        @WebParam(name = "request", targetNamespace = "")
-        HgvPlatformBaseModelSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelDataResponse.VXS
-     */
-    @WebMethod(action = "getHgvPlatformSubModelData")
-    @WebResult(name = "VXS", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformSubModelData", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelData")
-    @ResponseWrapper(localName = "getHgvPlatformSubModelDataResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelDataResponse")
-    @Action(input = "getHgvPlatformSubModelData", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformSubModelDataResponse")
-    public de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelDataResponse.VXS getHgvPlatformSubModelData(
-        @WebParam(name = "request", targetNamespace = "")
-        HgvPlatformSubModelDataRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getHgvPlatformTypes")
-    @WebResult(name = "hgvPlatformType", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformTypes", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformTypes")
-    @ResponseWrapper(localName = "getHgvPlatformTypesResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformTypesResponse")
-    @Action(input = "getHgvPlatformTypes", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformTypesResponse")
-    public List<IntegerStringPair> getHgvPlatformTypes(
-        @WebParam(name = "request", targetNamespace = "")
-        BasicSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getHgvPlatformManufacturers")
-    @WebResult(name = "hgvPlatformManufacturer", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformManufacturers", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformManufacturers")
-    @ResponseWrapper(localName = "getHgvPlatformManufacturersResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformManufacturersResponse")
-    @Action(input = "getHgvPlatformManufacturers", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformManufacturersResponse")
-    public List<IntegerStringPair> getHgvPlatformManufacturers(
-        @WebParam(name = "request", targetNamespace = "")
-        HgvPlatformManufacturerSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getHgvPlatformSubModels")
-    @WebResult(name = "hgvPlatformSubModel", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformSubModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModels")
-    @ResponseWrapper(localName = "getHgvPlatformSubModelsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelsResponse")
-    @Action(input = "getHgvPlatformSubModels", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformSubModelsResponse")
-    public List<IntegerStringPair> getHgvPlatformSubModels(
-        @WebParam(name = "request", targetNamespace = "")
-        HgvPlatformSubModelSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
     @WebMethod(action = "getSubModels")
     @WebResult(name = "subModel", targetNamespace = "")
     @RequestWrapper(localName = "getSubModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetSubModels")
@@ -159,6 +69,21 @@ public interface VehicleSelectionService {
     public List<IntegerStringPair> getBaseModels(
         @WebParam(name = "request", targetNamespace = "")
         BaseModelSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getManufacturers")
+    @WebResult(name = "manufacturer", targetNamespace = "")
+    @RequestWrapper(localName = "getManufacturers", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetManufacturers")
+    @ResponseWrapper(localName = "getManufacturersResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetManufacturersResponse")
+    @Action(input = "getManufacturers", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getManufacturersResponse")
+    public List<IntegerStringPair> getManufacturers(
+        @WebParam(name = "request", targetNamespace = "")
+        ManufacturerSelectionRequest request);
 
     /**
      * 
@@ -196,89 +121,14 @@ public interface VehicleSelectionService {
      * @return
      *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
      */
-    @WebMethod(action = "getManufacturers")
-    @WebResult(name = "manufacturer", targetNamespace = "")
-    @RequestWrapper(localName = "getManufacturers", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetManufacturers")
-    @ResponseWrapper(localName = "getManufacturersResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetManufacturersResponse")
-    @Action(input = "getManufacturers", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getManufacturersResponse")
-    public List<IntegerStringPair> getManufacturers(
+    @WebMethod(action = "getHgvPlatformAggregateManufacturers")
+    @WebResult(name = "hgvPlatformAggregateManufacturer", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformAggregateManufacturers", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateManufacturers")
+    @ResponseWrapper(localName = "getHgvPlatformAggregateManufacturersResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateManufacturersResponse")
+    @Action(input = "getHgvPlatformAggregateManufacturers", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformAggregateManufacturersResponse")
+    public List<IntegerStringPair> getHgvPlatformAggregateManufacturers(
         @WebParam(name = "request", targetNamespace = "")
-        ManufacturerSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<java.lang.Integer>
-     */
-    @WebMethod(action = "getPriceFocusConstructionYears")
-    @WebResult(name = "priceFocusConstructionYear", targetNamespace = "")
-    @RequestWrapper(localName = "getPriceFocusConstructionYears", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusConstructionYears")
-    @ResponseWrapper(localName = "getPriceFocusConstructionYearsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusConstructionYearsResponse")
-    @Action(input = "getPriceFocusConstructionYears", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getPriceFocusConstructionYearsResponse")
-    public List<Integer> getPriceFocusConstructionYears(
-        @WebParam(name = "request", targetNamespace = "")
-        PriceFocusSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getWheelBaseOptions")
-    @WebResult(name = "wheelBaseOption", targetNamespace = "")
-    @RequestWrapper(localName = "getWheelBaseOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetWheelBaseOptions")
-    @ResponseWrapper(localName = "getWheelBaseOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetWheelBaseOptionsResponse")
-    @Action(input = "getWheelBaseOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getWheelBaseOptionsResponse")
-    public List<IntegerStringPair> getWheelBaseOptions(
-        @WebParam(name = "request", targetNamespace = "")
-        SubTypeVariantEquipmentSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns de.dat.datecodeselection.services.vehicleselectionservice.SubModelByTextSearchSelectionResponse
-     */
-    @WebMethod(action = "getSubModelsByTextSearch")
-    @WebResult(name = "subModelsByTextSearch", targetNamespace = "")
-    @RequestWrapper(localName = "getSubModelsByTextSearch", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetSubModelsByTextSearch")
-    @ResponseWrapper(localName = "getSubModelsByTextSearchResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetSubModelsByTextSearchResponse")
-    @Action(input = "getSubModelsByTextSearch", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getSubModelsByTextSearchResponse")
-    public SubModelByTextSearchSelectionResponse getSubModelsByTextSearch(
-        @WebParam(name = "request", targetNamespace = "")
-        SubModelByTextSearchSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getOptionsbyClassification")
-    @WebResult(name = "options", targetNamespace = "")
-    @RequestWrapper(localName = "getOptionsbyClassification", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetOptionsbyClassification")
-    @ResponseWrapper(localName = "getOptionsbyClassificationResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetOptionsbyClassificationResponse")
-    @Action(input = "getOptionsbyClassification", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getOptionsbyClassificationResponse")
-    public List<IntegerStringPair> getOptionsbyClassification(
-        @WebParam(name = "request", targetNamespace = "")
-        SubTypeVariantClassifiedEquipmentSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getTypeOfDriveOptions")
-    @WebResult(name = "typeOfDriveOption", targetNamespace = "")
-    @RequestWrapper(localName = "getTypeOfDriveOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetTypeOfDriveOptions")
-    @ResponseWrapper(localName = "getTypeOfDriveOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetTypeOfDriveOptionsResponse")
-    @Action(input = "getTypeOfDriveOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getTypeOfDriveOptionsResponse")
-    public List<IntegerStringPair> getTypeOfDriveOptions(
-        @WebParam(name = "request", targetNamespace = "")
-        SubTypeVariantEquipmentSelectionRequest request);
+        AbstractSelectionRequest request);
 
     /**
      * 
@@ -314,29 +164,14 @@ public interface VehicleSelectionService {
      * 
      * @param request
      * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.StringStringPair>
-     */
-    @WebMethod(action = "getPriceFocusCases")
-    @WebResult(name = "priceFocusCase", targetNamespace = "")
-    @RequestWrapper(localName = "getPriceFocusCases", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusCases")
-    @ResponseWrapper(localName = "getPriceFocusCasesResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusCasesResponse")
-    @Action(input = "getPriceFocusCases", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getPriceFocusCasesResponse")
-    public List<StringStringPair> getPriceFocusCases(
-        @WebParam(name = "request", targetNamespace = "")
-        PriceFocusSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
      *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
      */
-    @WebMethod(action = "getCarBodyOptions")
-    @WebResult(name = "carBodyOption", targetNamespace = "")
-    @RequestWrapper(localName = "getCarBodyOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetCarBodyOptions")
-    @ResponseWrapper(localName = "getCarBodyOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetCarBodyOptionsResponse")
-    @Action(input = "getCarBodyOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getCarBodyOptionsResponse")
-    public List<IntegerStringPair> getCarBodyOptions(
+    @WebMethod(action = "getGearingOptions")
+    @WebResult(name = "gearingOption", targetNamespace = "")
+    @RequestWrapper(localName = "getGearingOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetGearingOptions")
+    @ResponseWrapper(localName = "getGearingOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetGearingOptionsResponse")
+    @Action(input = "getGearingOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getGearingOptionsResponse")
+    public List<IntegerStringPair> getGearingOptions(
         @WebParam(name = "request", targetNamespace = "")
         SubTypeVariantEquipmentSelectionRequest request);
 
@@ -359,6 +194,21 @@ public interface VehicleSelectionService {
      * 
      * @param request
      * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.StringStringPair>
+     */
+    @WebMethod(action = "getPriceFocusCases")
+    @WebResult(name = "priceFocusCase", targetNamespace = "")
+    @RequestWrapper(localName = "getPriceFocusCases", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusCases")
+    @ResponseWrapper(localName = "getPriceFocusCasesResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusCasesResponse")
+    @Action(input = "getPriceFocusCases", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getPriceFocusCasesResponse")
+    public List<StringStringPair> getPriceFocusCases(
+        @WebParam(name = "request", targetNamespace = "")
+        PriceFocusSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
      *     returns de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateModelDataResponse.VXS
      */
     @WebMethod(action = "getHgvPlatformAggregateModelData")
@@ -376,12 +226,117 @@ public interface VehicleSelectionService {
      * @return
      *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
      */
-    @WebMethod(action = "getGearingOptions")
-    @WebResult(name = "gearingOption", targetNamespace = "")
-    @RequestWrapper(localName = "getGearingOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetGearingOptions")
-    @ResponseWrapper(localName = "getGearingOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetGearingOptionsResponse")
-    @Action(input = "getGearingOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getGearingOptionsResponse")
-    public List<IntegerStringPair> getGearingOptions(
+    @WebMethod(action = "getNumberOfAxleOptions")
+    @WebResult(name = "numberOfAxleOption", targetNamespace = "")
+    @RequestWrapper(localName = "getNumberOfAxleOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetNumberOfAxleOptions")
+    @ResponseWrapper(localName = "getNumberOfAxleOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetNumberOfAxleOptionsResponse")
+    @Action(input = "getNumberOfAxleOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getNumberOfAxleOptionsResponse")
+    public List<IntegerStringPair> getNumberOfAxleOptions(
+        @WebParam(name = "request", targetNamespace = "")
+        SubTypeVariantEquipmentSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<java.lang.Integer>
+     */
+    @WebMethod(action = "getClassificationGroups")
+    @WebResult(name = "classificationGroup", targetNamespace = "")
+    @RequestWrapper(localName = "getClassificationGroups", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetClassificationGroups")
+    @ResponseWrapper(localName = "getClassificationGroupsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetClassificationGroupsResponse")
+    @Action(input = "getClassificationGroups", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getClassificationGroupsResponse")
+    public List<Integer> getClassificationGroups(
+        @WebParam(name = "request", targetNamespace = "")
+        SubTypeVariantSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getWheelBaseOptions")
+    @WebResult(name = "wheelBaseOption", targetNamespace = "")
+    @RequestWrapper(localName = "getWheelBaseOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetWheelBaseOptions")
+    @ResponseWrapper(localName = "getWheelBaseOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetWheelBaseOptionsResponse")
+    @Action(input = "getWheelBaseOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getWheelBaseOptionsResponse")
+    public List<IntegerStringPair> getWheelBaseOptions(
+        @WebParam(name = "request", targetNamespace = "")
+        SubTypeVariantEquipmentSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getHgvPlatformAggregateModels")
+    @WebResult(name = "hgvPlatformAggregateModel", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformAggregateModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateModels")
+    @ResponseWrapper(localName = "getHgvPlatformAggregateModelsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateModelsResponse")
+    @Action(input = "getHgvPlatformAggregateModels", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformAggregateModelsResponse")
+    public List<IntegerStringPair> getHgvPlatformAggregateModels(
+        @WebParam(name = "request", targetNamespace = "")
+        HgvPlatformAggregateModelSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns de.dat.datecodeselection.services.vehicleselectionservice.SubModelByTextSearchSelectionResponse
+     */
+    @WebMethod(action = "getSubModelsByTextSearch")
+    @WebResult(name = "subModelsByTextSearch", targetNamespace = "")
+    @RequestWrapper(localName = "getSubModelsByTextSearch", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetSubModelsByTextSearch")
+    @ResponseWrapper(localName = "getSubModelsByTextSearchResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetSubModelsByTextSearchResponse")
+    @Action(input = "getSubModelsByTextSearch", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getSubModelsByTextSearchResponse")
+    public SubModelByTextSearchSelectionResponse getSubModelsByTextSearch(
+        @WebParam(name = "request", targetNamespace = "")
+        SubModelByTextSearchSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getConstructionOptions")
+    @WebResult(name = "constructionOption", targetNamespace = "")
+    @RequestWrapper(localName = "getConstructionOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetConstructionOptions")
+    @ResponseWrapper(localName = "getConstructionOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetConstructionOptionsResponse")
+    @Action(input = "getConstructionOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getConstructionOptionsResponse")
+    public List<IntegerStringPair> getConstructionOptions(
+        @WebParam(name = "request", targetNamespace = "")
+        SubTypeVariantEquipmentSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getOptionsbyClassification")
+    @WebResult(name = "options", targetNamespace = "")
+    @RequestWrapper(localName = "getOptionsbyClassification", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetOptionsbyClassification")
+    @ResponseWrapper(localName = "getOptionsbyClassificationResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetOptionsbyClassificationResponse")
+    @Action(input = "getOptionsbyClassification", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getOptionsbyClassificationResponse")
+    public List<IntegerStringPair> getOptionsbyClassification(
+        @WebParam(name = "request", targetNamespace = "")
+        SubTypeVariantClassifiedEquipmentSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getCarBodyOptions")
+    @WebResult(name = "carBodyOption", targetNamespace = "")
+    @RequestWrapper(localName = "getCarBodyOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetCarBodyOptions")
+    @ResponseWrapper(localName = "getCarBodyOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetCarBodyOptionsResponse")
+    @Action(input = "getCarBodyOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getCarBodyOptionsResponse")
+    public List<IntegerStringPair> getCarBodyOptions(
         @WebParam(name = "request", targetNamespace = "")
         SubTypeVariantEquipmentSelectionRequest request);
 
@@ -406,42 +361,12 @@ public interface VehicleSelectionService {
      * @return
      *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
      */
-    @WebMethod(action = "getNumberOfAxleOptions")
-    @WebResult(name = "numberOfAxleOption", targetNamespace = "")
-    @RequestWrapper(localName = "getNumberOfAxleOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetNumberOfAxleOptions")
-    @ResponseWrapper(localName = "getNumberOfAxleOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetNumberOfAxleOptionsResponse")
-    @Action(input = "getNumberOfAxleOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getNumberOfAxleOptionsResponse")
-    public List<IntegerStringPair> getNumberOfAxleOptions(
-        @WebParam(name = "request", targetNamespace = "")
-        SubTypeVariantEquipmentSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getHgvPlatformAggregateModels")
-    @WebResult(name = "hgvPlatformAggregateModel", targetNamespace = "")
-    @RequestWrapper(localName = "getHgvPlatformAggregateModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateModels")
-    @ResponseWrapper(localName = "getHgvPlatformAggregateModelsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformAggregateModelsResponse")
-    @Action(input = "getHgvPlatformAggregateModels", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformAggregateModelsResponse")
-    public List<IntegerStringPair> getHgvPlatformAggregateModels(
-        @WebParam(name = "request", targetNamespace = "")
-        HgvPlatformAggregateModelSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
-     */
-    @WebMethod(action = "getConstructionOptions")
-    @WebResult(name = "constructionOption", targetNamespace = "")
-    @RequestWrapper(localName = "getConstructionOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetConstructionOptions")
-    @ResponseWrapper(localName = "getConstructionOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetConstructionOptionsResponse")
-    @Action(input = "getConstructionOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getConstructionOptionsResponse")
-    public List<IntegerStringPair> getConstructionOptions(
+    @WebMethod(action = "getTypeOfDriveOptions")
+    @WebResult(name = "typeOfDriveOption", targetNamespace = "")
+    @RequestWrapper(localName = "getTypeOfDriveOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetTypeOfDriveOptions")
+    @ResponseWrapper(localName = "getTypeOfDriveOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetTypeOfDriveOptionsResponse")
+    @Action(input = "getTypeOfDriveOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getTypeOfDriveOptionsResponse")
+    public List<IntegerStringPair> getTypeOfDriveOptions(
         @WebParam(name = "request", targetNamespace = "")
         SubTypeVariantEquipmentSelectionRequest request);
 
@@ -466,29 +391,104 @@ public interface VehicleSelectionService {
      * @return
      *     returns java.util.List<java.lang.Integer>
      */
-    @WebMethod(action = "getClassificationGroups")
-    @WebResult(name = "classificationGroup", targetNamespace = "")
-    @RequestWrapper(localName = "getClassificationGroups", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetClassificationGroups")
-    @ResponseWrapper(localName = "getClassificationGroupsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetClassificationGroupsResponse")
-    @Action(input = "getClassificationGroups", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getClassificationGroupsResponse")
-    public List<Integer> getClassificationGroups(
+    @WebMethod(action = "getPriceFocusConstructionYears")
+    @WebResult(name = "priceFocusConstructionYear", targetNamespace = "")
+    @RequestWrapper(localName = "getPriceFocusConstructionYears", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusConstructionYears")
+    @ResponseWrapper(localName = "getPriceFocusConstructionYearsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetPriceFocusConstructionYearsResponse")
+    @Action(input = "getPriceFocusConstructionYears", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getPriceFocusConstructionYearsResponse")
+    public List<Integer> getPriceFocusConstructionYears(
         @WebParam(name = "request", targetNamespace = "")
-        SubTypeVariantSelectionRequest request);
+        PriceFocusSelectionRequest request);
 
     /**
      * 
      * @param request
      * @return
-     *     returns de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleDataResponse.VXS
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
      */
-    @WebMethod(action = "getVehicleData")
-    @WebResult(name = "VXS", targetNamespace = "")
-    @RequestWrapper(localName = "getVehicleData", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleData")
-    @ResponseWrapper(localName = "getVehicleDataResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleDataResponse")
-    @Action(input = "getVehicleData", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getVehicleDataResponse")
-    public de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleDataResponse.VXS getVehicleData(
+    @WebMethod(action = "getHgvPlatformTypes")
+    @WebResult(name = "hgvPlatformType", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformTypes", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformTypes")
+    @ResponseWrapper(localName = "getHgvPlatformTypesResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformTypesResponse")
+    @Action(input = "getHgvPlatformTypes", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformTypesResponse")
+    public List<IntegerStringPair> getHgvPlatformTypes(
         @WebParam(name = "request", targetNamespace = "")
-        VehicleDataSelectionRequest request);
+        BasicSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getHgvPlatformSubModels")
+    @WebResult(name = "hgvPlatformSubModel", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformSubModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModels")
+    @ResponseWrapper(localName = "getHgvPlatformSubModelsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelsResponse")
+    @Action(input = "getHgvPlatformSubModels", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformSubModelsResponse")
+    public List<IntegerStringPair> getHgvPlatformSubModels(
+        @WebParam(name = "request", targetNamespace = "")
+        HgvPlatformSubModelSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelDataResponse.VXS
+     */
+    @WebMethod(action = "getHgvPlatformSubModelData")
+    @WebResult(name = "VXS", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformSubModelData", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelData")
+    @ResponseWrapper(localName = "getHgvPlatformSubModelDataResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelDataResponse")
+    @Action(input = "getHgvPlatformSubModelData", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformSubModelDataResponse")
+    public de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformSubModelDataResponse.VXS getHgvPlatformSubModelData(
+        @WebParam(name = "request", targetNamespace = "")
+        HgvPlatformSubModelDataRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getHgvPlatformManufacturers")
+    @WebResult(name = "hgvPlatformManufacturer", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformManufacturers", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformManufacturers")
+    @ResponseWrapper(localName = "getHgvPlatformManufacturersResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformManufacturersResponse")
+    @Action(input = "getHgvPlatformManufacturers", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformManufacturersResponse")
+    public List<IntegerStringPair> getHgvPlatformManufacturers(
+        @WebParam(name = "request", targetNamespace = "")
+        HgvPlatformManufacturerSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getHgvPlatformBaseModels")
+    @WebResult(name = "hgvPlatformBaseModel", targetNamespace = "")
+    @RequestWrapper(localName = "getHgvPlatformBaseModels", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformBaseModels")
+    @ResponseWrapper(localName = "getHgvPlatformBaseModelsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetHgvPlatformBaseModelsResponse")
+    @Action(input = "getHgvPlatformBaseModels", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getHgvPlatformBaseModelsResponse")
+    public List<IntegerStringPair> getHgvPlatformBaseModels(
+        @WebParam(name = "request", targetNamespace = "")
+        HgvPlatformBaseModelSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     */
+    @WebMethod(action = "getEngineOptions")
+    @WebResult(name = "engineOption", targetNamespace = "")
+    @RequestWrapper(localName = "getEngineOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetEngineOptions")
+    @ResponseWrapper(localName = "getEngineOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetEngineOptionsResponse")
+    @Action(input = "getEngineOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getEngineOptionsResponse")
+    public List<IntegerStringPair> getEngineOptions(
+        @WebParam(name = "request", targetNamespace = "")
+        SubTypeVariantEquipmentSelectionRequest request);
 
     /**
      * 
@@ -509,15 +509,15 @@ public interface VehicleSelectionService {
      * 
      * @param request
      * @return
-     *     returns java.util.List<de.dat.datecodeselection.services.vehicleselectionservice.IntegerStringPair>
+     *     returns de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleDataResponse.VXS
      */
-    @WebMethod(action = "getEngineOptions")
-    @WebResult(name = "engineOption", targetNamespace = "")
-    @RequestWrapper(localName = "getEngineOptions", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetEngineOptions")
-    @ResponseWrapper(localName = "getEngineOptionsResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetEngineOptionsResponse")
-    @Action(input = "getEngineOptions", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getEngineOptionsResponse")
-    public List<IntegerStringPair> getEngineOptions(
+    @WebMethod(action = "getVehicleData")
+    @WebResult(name = "VXS", targetNamespace = "")
+    @RequestWrapper(localName = "getVehicleData", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleData")
+    @ResponseWrapper(localName = "getVehicleDataResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleSelectionService", className = "de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleDataResponse")
+    @Action(input = "getVehicleData", output = "http://sphinx.dat.de/services/VehicleSelectionService/VehicleSelectionService/getVehicleDataResponse")
+    public de.dat.datecodeselection.services.vehicleselectionservice.GetVehicleDataResponse.VXS getVehicleData(
         @WebParam(name = "request", targetNamespace = "")
-        SubTypeVariantEquipmentSelectionRequest request);
+        VehicleDataSelectionRequest request);
 
 }

@@ -29,6 +29,21 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
+     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeResponse.VXS
+     */
+    @WebMethod(action = "getVehicleIdentificationByTypecode")
+    @WebResult(name = "VXS", targetNamespace = "")
+    @RequestWrapper(localName = "getVehicleIdentificationByTypecode", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecode")
+    @ResponseWrapper(localName = "getVehicleIdentificationByTypecodeResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeResponse")
+    @Action(input = "getVehicleIdentificationByTypecode", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVehicleIdentificationByTypecodeResponse")
+    public de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeResponse.VXS getVehicleIdentificationByTypecode(
+        @WebParam(name = "request", targetNamespace = "")
+        TypecodeSelectionRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
      *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeToyotaResponse.VXS
      */
     @WebMethod(action = "getVehicleIdentificationByTypecodeToyota")
@@ -59,21 +74,6 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
-     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeResponse.VXS
-     */
-    @WebMethod(action = "getVehicleIdentificationByTypecode")
-    @WebResult(name = "VXS", targetNamespace = "")
-    @RequestWrapper(localName = "getVehicleIdentificationByTypecode", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecode")
-    @ResponseWrapper(localName = "getVehicleIdentificationByTypecodeResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeResponse")
-    @Action(input = "getVehicleIdentificationByTypecode", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVehicleIdentificationByTypecodeResponse")
-    public de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByTypecodeResponse.VXS getVehicleIdentificationByTypecode(
-        @WebParam(name = "request", targetNamespace = "")
-        TypecodeSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
      *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByCodeSwitzerlandResponse.VXS
      */
     @WebMethod(action = "getVehicleIdentificationByCodeSwitzerland")
@@ -89,16 +89,16 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
-     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslationResponse.VXS
+     *     returns java.lang.Boolean
      */
-    @WebMethod(action = "getVehicleTranslation")
-    @WebResult(name = "VXS", targetNamespace = "")
-    @RequestWrapper(localName = "getVehicleTranslation", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslation")
-    @ResponseWrapper(localName = "getVehicleTranslationResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslationResponse")
-    @Action(input = "getVehicleTranslation", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVehicleTranslationResponse")
-    public de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslationResponse.VXS getVehicleTranslation(
+    @WebMethod(action = "orderMarkedVin")
+    @WebResult(name = "result", targetNamespace = "")
+    @RequestWrapper(localName = "orderMarkedVin", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.OrderMarkedVin")
+    @ResponseWrapper(localName = "orderMarkedVinResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.OrderMarkedVinResponse")
+    @Action(input = "orderMarkedVin", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/orderMarkedVinResponse")
+    public Boolean orderMarkedVin(
         @WebParam(name = "request", targetNamespace = "")
-        VehicleTranslationRequest request);
+        OrderMarkedVinRequest request);
 
     /**
      * 
@@ -134,6 +134,21 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
+     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslationResponse.VXS
+     */
+    @WebMethod(action = "getVehicleTranslation")
+    @WebResult(name = "VXS", targetNamespace = "")
+    @RequestWrapper(localName = "getVehicleTranslation", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslation")
+    @ResponseWrapper(localName = "getVehicleTranslationResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslationResponse")
+    @Action(input = "getVehicleTranslation", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVehicleTranslationResponse")
+    public de.dat.datecodeselection.vehicleidentificationservice.GetVehicleTranslationResponse.VXS getVehicleTranslation(
+        @WebParam(name = "request", targetNamespace = "")
+        VehicleTranslationRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
      *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByVinResponse.VXS
      */
     @WebMethod(action = "getVehicleIdentificationByVin")
@@ -149,16 +164,31 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
-     *     returns java.lang.Boolean
+     *     returns de.dat.datecodeselection.vehicleidentificationservice.VinOcrResponse
      */
-    @WebMethod(action = "orderMarkedVin")
-    @WebResult(name = "result", targetNamespace = "")
-    @RequestWrapper(localName = "orderMarkedVin", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.OrderMarkedVin")
-    @ResponseWrapper(localName = "orderMarkedVinResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.OrderMarkedVinResponse")
-    @Action(input = "orderMarkedVin", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/orderMarkedVinResponse")
-    public Boolean orderMarkedVin(
+    @WebMethod(action = "getVinByOcr")
+    @WebResult(name = "vin", targetNamespace = "")
+    @RequestWrapper(localName = "getVinByOcr", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByOcr")
+    @ResponseWrapper(localName = "getVinByOcrResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByOcrResponse")
+    @Action(input = "getVinByOcr", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVinByOcrResponse")
+    public VinOcrResponse getVinByOcr(
         @WebParam(name = "request", targetNamespace = "")
-        OrderMarkedVinRequest request);
+        VinOcrRequest request);
+
+    /**
+     * 
+     * @param request
+     * @return
+     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFranceResponse.VXS
+     */
+    @WebMethod(action = "getVinByLicencePlateFrance")
+    @WebResult(name = "VXS", targetNamespace = "")
+    @RequestWrapper(localName = "getVinByLicencePlateFrance", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFrance")
+    @ResponseWrapper(localName = "getVinByLicencePlateFranceResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFranceResponse")
+    @Action(input = "getVinByLicencePlateFrance", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVinByLicencePlateFranceResponse")
+    public de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFranceResponse.VXS getVinByLicencePlateFrance(
+        @WebParam(name = "request", targetNamespace = "")
+        VinByLicencePlateFranceRequest request);
 
     /**
      * 
@@ -194,16 +224,16 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
-     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermanyResponse.LicencePlateGermanyResponse
+     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKbaResponse.VXS
      */
-    @WebMethod(action = "getVinByLicencePlateGermany")
-    @WebResult(name = "licencePlateGermanyResponse", targetNamespace = "")
-    @RequestWrapper(localName = "getVinByLicencePlateGermany", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermany")
-    @ResponseWrapper(localName = "getVinByLicencePlateGermanyResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermanyResponse")
-    @Action(input = "getVinByLicencePlateGermany", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVinByLicencePlateGermanyResponse")
-    public de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermanyResponse.LicencePlateGermanyResponse getVinByLicencePlateGermany(
+    @WebMethod(action = "getVehicleIdentificationByKba")
+    @WebResult(name = "VXS", targetNamespace = "")
+    @RequestWrapper(localName = "getVehicleIdentificationByKba", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKba")
+    @ResponseWrapper(localName = "getVehicleIdentificationByKbaResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKbaResponse")
+    @Action(input = "getVehicleIdentificationByKba", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVehicleIdentificationByKbaResponse")
+    public de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKbaResponse.VXS getVehicleIdentificationByKba(
         @WebParam(name = "request", targetNamespace = "")
-        VinByLicencePlateGermanyRequest request);
+        KbaSelectionRequest request);
 
     /**
      * 
@@ -224,45 +254,15 @@ public interface VehicleIdentificationService {
      * 
      * @param request
      * @return
-     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKbaResponse.VXS
+     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermanyResponse.LicencePlateGermanyResponse
      */
-    @WebMethod(action = "getVehicleIdentificationByKba")
-    @WebResult(name = "VXS", targetNamespace = "")
-    @RequestWrapper(localName = "getVehicleIdentificationByKba", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKba")
-    @ResponseWrapper(localName = "getVehicleIdentificationByKbaResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKbaResponse")
-    @Action(input = "getVehicleIdentificationByKba", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVehicleIdentificationByKbaResponse")
-    public de.dat.datecodeselection.vehicleidentificationservice.GetVehicleIdentificationByKbaResponse.VXS getVehicleIdentificationByKba(
+    @WebMethod(action = "getVinByLicencePlateGermany")
+    @WebResult(name = "licencePlateGermanyResponse", targetNamespace = "")
+    @RequestWrapper(localName = "getVinByLicencePlateGermany", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermany")
+    @ResponseWrapper(localName = "getVinByLicencePlateGermanyResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermanyResponse")
+    @Action(input = "getVinByLicencePlateGermany", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVinByLicencePlateGermanyResponse")
+    public de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateGermanyResponse.LicencePlateGermanyResponse getVinByLicencePlateGermany(
         @WebParam(name = "request", targetNamespace = "")
-        KbaSelectionRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFranceResponse.VXS
-     */
-    @WebMethod(action = "getVinByLicencePlateFrance")
-    @WebResult(name = "VXS", targetNamespace = "")
-    @RequestWrapper(localName = "getVinByLicencePlateFrance", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFrance")
-    @ResponseWrapper(localName = "getVinByLicencePlateFranceResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFranceResponse")
-    @Action(input = "getVinByLicencePlateFrance", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVinByLicencePlateFranceResponse")
-    public de.dat.datecodeselection.vehicleidentificationservice.GetVinByLicencePlateFranceResponse.VXS getVinByLicencePlateFrance(
-        @WebParam(name = "request", targetNamespace = "")
-        VinByLicencePlateFranceRequest request);
-
-    /**
-     * 
-     * @param request
-     * @return
-     *     returns de.dat.datecodeselection.vehicleidentificationservice.VinOcrResponse
-     */
-    @WebMethod(action = "getVinByOcr")
-    @WebResult(name = "vin", targetNamespace = "")
-    @RequestWrapper(localName = "getVinByOcr", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByOcr")
-    @ResponseWrapper(localName = "getVinByOcrResponse", targetNamespace = "http://sphinx.dat.de/services/VehicleIdentificationService", className = "de.dat.datecodeselection.vehicleidentificationservice.GetVinByOcrResponse")
-    @Action(input = "getVinByOcr", output = "http://sphinx.dat.de/services/VehicleIdentificationService/VehicleIdentificationService/getVinByOcrResponse")
-    public VinOcrResponse getVinByOcr(
-        @WebParam(name = "request", targetNamespace = "")
-        VinOcrRequest request);
+        VinByLicencePlateGermanyRequest request);
 
 }
